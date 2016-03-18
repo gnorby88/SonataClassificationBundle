@@ -22,6 +22,11 @@ abstract class Context implements ContextInterface
      * @var string
      */
     protected $name;
+    
+    /**
+     * @var string
+     */
+    protected $slug;
 
     /**
      * @var \DateTime
@@ -52,6 +57,22 @@ abstract class Context implements ContextInterface
     public function getName()
     {
         return $this->name;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**
