@@ -70,6 +70,11 @@ abstract class Category implements CategoryInterface
      * @var ContextInterface
      */
     protected $context;
+    
+    /**
+     * @var int
+     */
+    protected $count;
 
     /**
      * {@inheritdoc}
@@ -328,5 +333,21 @@ abstract class Category implements CategoryInterface
     public function getContext()
     {
         return $this->context;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCount()
+    {
+        return $this->count;
     }
 }
